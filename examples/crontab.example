@@ -1,0 +1,13 @@
+# Example only. Nothing here is installed for you.
+# Run `crontab -e` and adapt the paths. Mondays at 08:00 local time:
+#
+# 0 8 * * 1  cd ~/last30days-skill && \
+#   python3 skills/last30days/scripts/watchlist.py run-all && \
+#   python3 skills/last30days/scripts/briefing.py generate --weekly
+#
+# Notes from the last30days docs:
+# - `watchlist.py add "<topic>" --weekly` only stores the schedule as metadata.
+#   cron (or Task Scheduler on Windows) does the actual running.
+# - Watchlist runs use --quick and a 90-day lookback.
+# - The watchlist has a daily budget (default USD 5.00, counted in UTC).
+#   Free sources cost nothing against it.
